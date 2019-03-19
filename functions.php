@@ -1,24 +1,27 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_enqueue_styles' );
-function hwcoe_ufl_child_enqueue_styles() {
+
+// add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_scripts' );
+
+function hwcoe_ufl_child_scripts() {
 	
-	$parent_style = 'parent-style'; //This is hwcoe-ufl style referrence for the hwcoe-ufl theme.
-	 
-	//enqueue parent styles
+	//enqueue parent stylesheet
+	$parent_style = 'hwcoe-ufl-style'; 
+
+	wp_enqueue_style( $parent_style, 
+		get_template_directory_uri() . '/style.css', 
+		['bootstrap', 'prettyPhoto'],
+		get_theme_version() 
+	);
 	
-    // Bootstrap
-	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/inc/bootstrap/css/bootstrap.min.css');
-	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap.min.js');
-		
-	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'hwcoe-ufl-child-style',
+		get_stylesheet_directory_uri() . '/style.css',
+		array( $parent_style ),
+		wp_get_theme()->get('Version')
+	);
+
+    wp_enqueue_script('hwcoe-ufl-child-scripts', get_stylesheet_directory_uri() . '/scripts.js', array(), get_theme_version(), true);
 	
-	//enqueue child styles
-	wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style),
-        filemtime( get_stylesheet_directory() . '/style.css' )
-    );
 }
-add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_scripts' );
 
 ?>
