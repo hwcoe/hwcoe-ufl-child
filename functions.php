@@ -1,6 +1,8 @@
 <?php
-
-// add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_scripts' );
+/**
+ * UF HWCOE Child theme example functions and definitions.
+*
+*/
 
 function hwcoe_ufl_child_scripts() {
 	
@@ -10,13 +12,13 @@ function hwcoe_ufl_child_scripts() {
 	wp_enqueue_style( $parent_style, 
 		get_template_directory_uri() . '/style.css', 
 		['bootstrap', 'prettyPhoto'],
-		get_theme_version() 
+		wp_get_theme('hwcoe-ufl')->get('Version')
 	);
 	
 	wp_enqueue_style( 'hwcoe-ufl-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array( $parent_style ),
-		wp_get_theme()->get('Version')
+		get_theme_version() 
 	);
 
     wp_enqueue_script('hwcoe-ufl-child-scripts', get_stylesheet_directory_uri() . '/scripts.js', array(), get_theme_version(), true);
@@ -24,4 +26,14 @@ function hwcoe_ufl_child_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_scripts' );
 
-?>
+// Custom Function to Include
+if ( !function_exists( 'hwcoe_ufl_child_icon_url' ) ) {
+
+	function hwcoe_ufl_child_icon_url() {
+		if ( empty($url) ){
+			$url = get_stylesheet_directory_uri() . '/favicon.png';
+		}
+		return $url;
+	}
+	add_filter( 'get_site_icon_url', 'hwcoe_ufl_child_icon_url' );
+}
