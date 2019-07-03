@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Custom Page Template
+ * Template Name: Custom Child Theme Page Template
  * 
  * @package HWCOE_UFL
  *
