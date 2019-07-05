@@ -20,7 +20,7 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'double_content' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-double-content.php' ); ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/modules/ufl-double-content.php' ); ?>
 				<?php endif // double_content ?>
 				<?php
 				  /*
@@ -28,7 +28,7 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'short_timeline_display' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-timeline.php' ); ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/modules/ufl-cf-timeline.php' ); ?>
 				<?php endif // short_timeline_display ?>
 				
  			<?php endwhile // the_row ?>
