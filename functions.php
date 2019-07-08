@@ -43,49 +43,28 @@ if ( !function_exists( 'hwcoe_ufl_child_icon_url' ) ) {
  */
 define( "HWCOE_UFL_CHILD_INC_DIR", get_stylesheet_directory() . "/inc" );
 
-
 // Integrating Advanced Custom Fields
-remove_filter( 'acf/settings/save_json', 'hwcoe_ufl_acf_json_save_point' );
-add_filter( 'acf/settings/save_json', function() {
-    return HWCOE_UFL_CHILD_INC_DIR . '/acf-json';
-} );
+// filters are added in parent theme's functions.php
+if (!function_exists('hwcoe_ufl_acf_json_save_point')) { 
+	function hwcoe_ufl_acf_json_save_point( $path ) {
+		$path = HWCOE_UFL_CHILD_INC_DIR . '/acf-json';
+		// return
+		return $path; 
+	}
+}
 
-// add_filter( 'acf/settings/save_json', function( $path ) {
-// 	unset($path);
-//     $path = get_stylesheet_directory() . '/inc/acf-json';
-// 	// return
-// 	return $path; 
-// } );
-
-// add_filter('acf/settings/save_json', 'my_acf_json_save_point');
-
-// function my_acf_json_save_point( $path = '' ) {
-// 	$path = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
-
-// 	if ( is_child_theme() ) {
-// 		$path = get_stylesheet_directory() . '/inc/acf-json';
-// 	}
-
-// 	return $path;
-// }
-
-remove_filter('acf/settings/load_json', 'hwcoe_ufl_acf_json_load_point');
-add_filter( 'acf/settings/load_json', function( $paths ) {
-	unset($paths[0]);
+if (!function_exists('hwcoe_ufl_acf_json_load_point')) {
+	function hwcoe_ufl_acf_json_load_point( $paths ) {	
+		unset($paths[0]);
    
-	array_push(
-		$paths,
-		// load child theme custom fields
-		HWCOE_UFL_CHILD_INC_DIR . '/acf-json',
-		// load parent theme custom fields		
-		get_template_directory() . '/inc/advanced-custom-fields/acf-json'
-	);
+		array_push(
+			$paths,
+			// load child theme custom fields
+			HWCOE_UFL_CHILD_INC_DIR . '/acf-json',
+			// load parent theme custom fields		
+			get_template_directory() . '/inc/advanced-custom-fields/acf-json'
+		);
 
-	return $paths;
-} );
-
-// Integrate Advanced Custom Fields
-// add_filter( 'acf/settings/save_json', function() {
-// 	// save to the acf-json directory in child theme folder
-//     return get_stylesheet_directory() . '/inc/acf-json';
-// } );
+		return $paths;
+	}
+}
