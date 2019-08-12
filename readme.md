@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 1.1.1-beta
 - Bugfix: Fix issue with local JSON fields saving to parent theme when saved in child theme
-- TODO: Update sample field groups and page template that uses them
+- Update sample field groups and page/post templates that use them
 
 1.1.0-beta
 - Define child theme includes directory
