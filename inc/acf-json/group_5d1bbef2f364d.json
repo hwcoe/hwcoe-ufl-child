@@ -82,111 +82,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_5d1bc336aed18": {
-                    "key": "layout_5d1bc336aed18",
-                    "name": "timeline_display",
-                    "label": "Timeline Display",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5d1bc336aed19",
-                            "label": "Section Headline",
-                            "name": "section_headline",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5d1bc336aed1c",
-                            "label": "Timeline Display",
-                            "name": "timeline",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 2,
-                            "max": 0,
-                            "layout": "row",
-                            "button_label": "Add Item",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5d1cbbe816fd3",
-                                    "label": "Headline",
-                                    "name": "headline",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5d1cbbf816fd4",
-                                    "label": "Date",
-                                    "name": "date",
-                                    "type": "date_picker",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "display_format": "d\/m\/Y",
-                                    "return_format": "d\/m\/Y",
-                                    "first_day": 1
-                                },
-                                {
-                                    "key": "field_5d1cbc4616fd5",
-                                    "label": "Content",
-                                    "name": "content",
-                                    "type": "textarea",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -213,6 +108,6 @@
         "format"
     ],
     "active": 1,
-    "description": "Sample modules to be included with a child theme. This one shows in a custom child theme page template.",
-    "modified": 1562767030
+    "description": "Sample modules to be included with a child theme. This one shows in a custom child theme page template and hides the main Content Editor.",
+    "modified": 1565625517
 }

@@ -38,24 +38,9 @@
 			if ( is_singular() ):
 				the_content();
 		?>
+		<!-- ACF Child theme post fields -->
 		<h2><?php the_field('acf_heading'); ?></h2>
-		<?php 
-			$image = get_field('image');
-
-			if( !empty($image) ): ?>
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			<?php endif; ?>
-		<?php 
-
-			$image = get_field('acf_image');
-			$size = 'full'; // (thumbnail, medium, large, full or custom size)
-
-			if ( $image ) {
-				echo wp_get_attachment_image( $image, $size );
-			}
-
-		?>
-
+		
 		<?php the_field('acf_body'); ?>
 
 		<?php

@@ -22,30 +22,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d25f87d2f3d5",
-            "label": "Image",
-            "name": "acf_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5d25f895419d0",
             "label": "Body",
             "name": "acf_body",
@@ -81,6 +57,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Sample fields to be include in a child theme. These show up in any post.",
-    "modified": 1562772931
+    "description": "Sample fields that will show up in any post on a site using the child theme. (Edit for your own child theme)",
+    "modified": 1565624534
 }
