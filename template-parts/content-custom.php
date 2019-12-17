@@ -22,6 +22,11 @@
 				<?php if( get_row_layout() == 'double_content' ): ?>
 					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/modules/ufl-double-content.php' ); ?>
 				<?php endif // double_content ?>
+				<?php
+				  /*
+				   * Other modules here 
+				   */
+				  ?>
 				
  			<?php endwhile // the_row ?>
 		<?php endif // have_rows ?>

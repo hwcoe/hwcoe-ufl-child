@@ -7,6 +7,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.1.2-beta
+- Add `<main>` landmark to sample custom page template
+- Add commented instructions in custom content template part
+
 1.1.1-beta
 - Bugfix: Fix issue with local JSON fields saving to parent theme when saved in child theme
 - Update sample field groups and page/post templates that use them

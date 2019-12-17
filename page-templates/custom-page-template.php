@@ -7,7 +7,7 @@
  */
 get_header(); ?>
 
-<div id="main" class="full-width-content">
+<main id="main" class="full-width-content">
 	<?php 
 		echo "<div class=\"container\">";
 			hwcoe_ufl_entry_title();
@@ -22,6 +22,6 @@ get_header(); ?>
     
 	
     
-</div>
+</main>
 
 <?php get_footer(); ?>
